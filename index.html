@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hema Diamond | Fresh Produce Import · Muscat</title>
+<meta name="description" content="Hema Diamond: fresh fruit and vegetable importer in Muscat, Oman serving the GCC.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{pine:'#103F35',gold:'#D5AD63',cream:'#F5F3EE',pearl:'#F3F5F1'}}}}</script>
+<link rel="stylesheet" href="css/style.css?v=30">
+</head>
+<body class="antialiased overflow-x-hidden">
+<svg width="0" height="0" class="absolute"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm4.4 13.3c-.2.5-1.1 1-1.5 1-.4.1-.9.1-2.800-.6-2.400-1-3.900-3.400-4-3.600-.1-.1-1-1.300-1-2.500s.6-1.800.9-2c.2-.2.4-.3.600-.3h.4c.2 0 .4 0 .5.4l.8 1.900c.1.200.1.300 0 .5l-.3.500c-.1.100-.3.300-.1.500.2.300.7 1.100 1.500 1.800 1 .9 1.800 1.100 2.100 1.300.3.100.4.100.5-.1l.7-.9c.2-.2.3-.2.500-.1l1.700.8c.2.100.4.200.4.300.1.200.1.600-.1 1.100Z"/></symbol></svg>
+<div id="pre" role="status" aria-label="Loading">
+ <div class="pre-lock">
+  <img class="pre-logo" src="assets/images/logo.png" alt="Hema Diamond">
+  <div class="pre-rule" aria-hidden="true"><span></span></div>
+  <p class="pre-tag" id="preTag">Fresh produce · Muscat</p>
+ </div>
+</div>
+<script>
+(function () {
+  var map = { en: "Fresh produce · Muscat", ar: "منتجات طازجة · مسقط", fa: "محصولات تازه · مسقط" };
+  var l = "en";
+  try { l = localStorage.getItem("hd_lang") || (navigator.language || "").slice(0, 2); } catch (e) {}
+  if (!map[l]) l = "en";
+  var el = document.getElementById("preTag");
+  if (el) { el.textContent = map[l]; if (l !== "en") el.setAttribute("dir", "rtl"); }
+})();
+</script>
+<div class="cur cur-ring"></div><div class="cur cur-dot"></div>
+
+<header id="hd" class="fixed top-0 inset-x-0 z-50">
+ <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
+  <a href="#home" class="brand" aria-label="Hema Diamond"><img class="brand-logo" src="assets/images/logo.png" alt="Hema Diamond"></a>
+  <nav class="hidden lg:flex gap-9 text-sm font-medium">
+   <a class="nav-link" href="#home" data-i18n="nav_home"></a><a class="nav-link" href="#about" data-i18n="nav_about"></a><a class="nav-link" href="#products" data-i18n="nav_products"></a><a class="nav-link" href="#quality" data-i18n="nav_quality"></a><a class="nav-link" href="#contact" data-i18n="nav_contact"></a>
+  </nav>
+  <div class="flex items-center gap-3">
+   <div class="lang-switch" dir="ltr"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ar">AR</button><button class="lang-btn" data-lang="fa">FA</button></div>
+   <a href="#contact" class="btn btn-primary hidden md:inline-flex !py-2.5 text-sm" data-i18n="cta_quote"></a>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="home">
+ <div class="hero" aria-roledescription="carousel">
+  <div class="hs on"><img src="assets/images/field-sunset.jpg" alt="" fetchpriority="high"></div>
+  <div class="hs"><img src="assets/images/field-close.jpg" alt=""></div>
+  <div class="hs"><img src="assets/images/market-shelf.jpg" alt=""></div>
+  <button type="button" class="hero-btn hero-prev" id="heroPrev" data-i18n-aria="hero_prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M15 5 8 12l7 7"/></svg></button>
+  <button type="button" class="hero-btn hero-next" id="heroNext" data-i18n-aria="hero_next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="hero-dots">
+   <button type="button" class="hero-dot on" aria-label="1"></button>
+   <button type="button" class="hero-dot" aria-label="2"></button>
+   <button type="button" class="hero-dot" aria-label="3"></button>
+  </div>
+ </div>
+ <div class="hero-copy">
+  <div class="max-w-3xl mx-auto px-5">
+   <h1 class="serif reveal text-4xl sm:text-6xl font-semibold leading-[1.15]"><span data-i18n="hero_t1"></span><br><span class="gold-ink" data-i18n="hero_t2"></span></h1>
+   <p class="reveal lead" style="--d:.15s" data-i18n="hero_sub"></p>
+   <div class="reveal mt-8 flex flex-wrap gap-4" style="--d:.3s">
+    <a href="#products" class="btn btn-primary" data-i18n="hero_cta1"></a>
+    <a class="btn btn-ghost wa" target="_blank" rel="noopener"><svg class="w-5 h-5"><use href="#wa"/></svg><span data-i18n="hero_cta2"></span></a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="about" class="band-light py-24 sm:py-36">
+ <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+  <div class="reveal"><h2 class="serif text-3xl sm:text-5xl font-semibold leading-tight" data-i18n="about_t"></h2><p class="mt-6 lead max-w-xl" data-i18n="about_p"></p></div>
+  <div class="grid gap-4">
+   <div class="reveal card rounded-2xl p-6"><h3 class="serif text-xl" data-i18n="ab1t"></h3><p class="muted text-sm mt-2 leading-7" data-i18n="ab1d"></p></div>
+   <div class="reveal card rounded-2xl p-6" style="--d:.1s"><h3 class="serif text-xl" data-i18n="ab2t"></h3><p class="muted text-sm mt-2 leading-7" data-i18n="ab2d"></p></div>
+   <div class="reveal card rounded-2xl p-6" style="--d:.2s"><h3 class="serif text-xl" data-i18n="ab3t"></h3><p class="muted text-sm mt-2 leading-7" data-i18n="ab3d"></p></div>
+  </div>
+ </div>
+</section>
+
+<section id="stats" class="stats" aria-labelledby="statsTitle">
+ <img class="stats-bg" src="assets/images/field-sunset.jpg" alt="" aria-hidden="true">
+ <div class="stats-shade" aria-hidden="true"></div>
+ <svg class="stats-defs" width="0" height="0" aria-hidden="true"><defs>
+  <linearGradient id="statGold" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff6d8"/><stop offset=".48" stop-color="#D5AD63"/><stop offset="1" stop-color="#8a6424"/>
+  </linearGradient>
+ </defs></svg>
+ <div class="max-w-6xl mx-auto px-5">
+  <div class="stats-head reveal text-center">
+   <p class="stats-kicker"><i aria-hidden="true"></i><span data-i18n="st_k"></span></p>
+   <h2 id="statsTitle" class="serif" data-i18n="st_t"></h2>
+  </div>
+  <div class="stats-panel">
+   <article class="stat" style="--i:0">
+    <div class="stat-dial">
+     <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="stat-track" cx="60" cy="60" r="52"/><circle class="stat-arc" cx="60" cy="60" r="52"/></svg>
+     <p class="stat-figure" dir="ltr"><span class="stat-val"><span class="stat-ghost" aria-hidden="true"></span><span class="stat-live" data-count="48">0</span></span><span class="stat-plus">+</span></p>
+    </div>
+    <p class="stat-label" data-i18n="st1"></p>
+   </article>
+   <article class="stat" style="--i:1">
+    <div class="stat-dial">
+     <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="stat-track" cx="60" cy="60" r="52"/><circle class="stat-arc" cx="60" cy="60" r="52"/></svg>
+     <p class="stat-figure" dir="ltr"><span class="stat-val"><span class="stat-ghost" aria-hidden="true"></span><span class="stat-live" data-count="120">0</span></span><span class="stat-plus">+</span></p>
+    </div>
+    <p class="stat-label" data-i18n="st2"></p>
+   </article>
+   <article class="stat" style="--i:2">
+    <div class="stat-dial">
+     <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="stat-track" cx="60" cy="60" r="52"/><circle class="stat-arc" cx="60" cy="60" r="52"/></svg>
+     <p class="stat-figure" dir="ltr"><span class="stat-val"><span class="stat-ghost" aria-hidden="true"></span><span class="stat-live" data-count="240">0</span></span><span class="stat-plus">+</span></p>
+    </div>
+    <p class="stat-label" data-i18n="st3"></p>
+   </article>
+   <article class="stat" style="--i:3">
+    <div class="stat-dial">
+     <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="stat-track" cx="60" cy="60" r="52"/><circle class="stat-arc" cx="60" cy="60" r="52"/></svg>
+     <p class="stat-figure" dir="ltr"><span class="stat-val"><span class="stat-ghost" aria-hidden="true"></span><span class="stat-live" data-count="365">0</span></span><span class="stat-plus">+</span></p>
+    </div>
+    <p class="stat-label" data-i18n="st4"></p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="why" class="why" aria-labelledby="whyTitle">
+ <div class="max-w-6xl mx-auto px-5">
+  <div class="reveal text-center max-w-xl mx-auto">
+   <h2 id="whyTitle" class="serif text-3xl sm:text-5xl font-semibold" data-i18n="why_t"></h2>
+   <p class="mt-4 lead" data-i18n="why_sub"></p>
+  </div>
+  <div class="why-stage reveal">
+   <article class="why-item why-a">
+    <p class="why-n" aria-hidden="true">01</p>
+    <h3 class="serif" data-i18n="w1t"></h3>
+    <p data-i18n="w1d"></p>
+   </article>
+   <article class="why-item why-b">
+    <p class="why-n" aria-hidden="true">02</p>
+    <h3 class="serif" data-i18n="w2t"></h3>
+    <p data-i18n="w2d"></p>
+   </article>
+   <div class="why-mark">
+    <img src="assets/images/logo.png" alt="Hema Diamond">
+   </div>
+   <article class="why-item why-c">
+    <p class="why-n" aria-hidden="true">03</p>
+    <h3 class="serif" data-i18n="w3t"></h3>
+    <p data-i18n="w3d"></p>
+   </article>
+   <article class="why-item why-d">
+    <p class="why-n" aria-hidden="true">04</p>
+    <h3 class="serif" data-i18n="w4t"></h3>
+    <p data-i18n="w4d"></p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="clients" class="clients" aria-labelledby="clientsTitle">
+ <div class="max-w-7xl mx-auto px-5">
+  <div class="reveal text-center max-w-xl mx-auto">
+   <h2 id="clientsTitle" class="serif text-3xl sm:text-5xl font-semibold" data-i18n="clients_t"></h2>
+  </div>
+  <div class="clients-bar">
+   <button type="button" class="clients-nav" id="clientsPrev" data-i18n-aria="clients_prev" aria-label="Previous clients"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M15 5 8 12l7 7"/></svg></button>
+   <div class="clients-viewport" id="clientsView">
+  <ul class="clients-grid" id="clientsTrack">
+   <li class="client-card c1" tabindex="0">
+    <img class="client-logo" src="assets/images/clients/logo1.png" alt="Kempinski">
+   </li>
+   <li class="client-card c2" tabindex="0">
+    <img class="client-logo" src="assets/images/clients/logo2.png" alt="Marriott">
+   </li>
+   <li class="client-card c3" tabindex="0">
+    <img class="client-logo" src="assets/images/clients/logo3.png" alt="Hilton">
+   </li>
+   <li class="client-card c4" tabindex="0">
+    <img class="client-logo" src="assets/images/clients/logo4.png" alt="IHG Hotels &amp; Resorts">
+   </li>
+  </ul>
+   </div>
+   <button type="button" class="clients-nav" id="clientsNext" data-i18n-aria="clients_next" aria-label="Next clients"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+ </div>
+</section>
+
+<section id="products" class="py-24 sm:py-32"><div class="max-w-7xl mx-auto px-5">
+ <div class="reveal text-center max-w-2xl mx-auto"><h2 class="serif text-3xl sm:text-5xl font-semibold" data-i18n="prod_t"></h2><p class="mt-4 lead" data-i18n="prod_sub"></p></div>
+ <div class="prod-feature reveal">
+  <button type="button" class="pf pf-a" data-ask-key="pf1"><img src="assets/images/p1.jpg" alt=""><span data-i18n="pf1"></span></button>
+  <button type="button" class="pf pf-b" data-ask-key="pf2"><img src="assets/images/p2.jpg" alt=""><span data-i18n="pf2"></span></button>
+  <button type="button" class="pf pf-c" data-ask-key="pf3"><img src="assets/images/p3.jpg" alt=""><span data-i18n="pf3"></span></button>
+ </div>
+ <div class="reveal mt-10 flex flex-wrap justify-center gap-3"><button class="tab active" data-cat="all" data-i18n="f_all"></button><button class="tab" data-cat="veg" data-i18n="f_veg"></button><button class="tab" data-cat="tropical" data-i18n="f_tropical"></button><button class="tab" data-cat="fruit" data-i18n="f_fruit"></button></div>
+ <div id="grid" class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+</div></section>
+
+<section id="voices" class="voices" aria-labelledby="voicesTitle">
+ <img class="voices-bg" src="assets/images/apples-dark.jpg" alt="" aria-hidden="true">
+ <div class="voices-shade" aria-hidden="true"></div>
+ <div class="max-w-5xl mx-auto px-5">
+  <div class="reveal voices-head text-center">
+   <p class="voices-kicker" data-i18n="say_k"></p>
+   <h2 id="voicesTitle" class="serif" data-i18n="say_t"></h2>
+  </div>
+  <div class="voices-slider reveal" id="voicesSlider">
+   <button type="button" class="voices-btn" id="voicesPrev" data-i18n-aria="say_prev" aria-label="Previous quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M15 5 8 12l7 7"/></svg></button>
+   <div class="voices-stage">
+    <blockquote class="voices-lead on">
+     <p class="serif" data-i18n="say1q"></p>
+     <footer class="voices-who" data-i18n="say1r"></footer>
+    </blockquote>
+    <blockquote class="voices-lead" aria-hidden="true">
+     <p class="serif" data-i18n="say2q"></p>
+     <footer class="voices-who" data-i18n="say2r"></footer>
+    </blockquote>
+    <blockquote class="voices-lead" aria-hidden="true">
+     <p class="serif" data-i18n="say3q"></p>
+     <footer class="voices-who" data-i18n="say3r"></footer>
+    </blockquote>
+   </div>
+   <button type="button" class="voices-btn" id="voicesNext" data-i18n-aria="say_next" aria-label="Next quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5l7 7-7 7"/></svg></button>
+   <div class="voices-dots" role="tablist">
+    <button type="button" class="voices-dot on" aria-label="1"></button>
+    <button type="button" class="voices-dot" aria-label="2"></button>
+    <button type="button" class="voices-dot" aria-label="3"></button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band band-quote py-24 sm:py-32 text-center">
+ <div class="max-w-3xl mx-auto px-5 reveal"><h2 class="serif text-3xl sm:text-5xl font-semibold" data-i18n="c_t"></h2><p class="mt-4" data-i18n="c_sub"></p><a href="#contact" class="btn btn-primary mt-8" data-i18n="cta_quote"></a></div>
+</section>
+
+<section id="quality" class="band-light py-24 sm:py-36">
+ <div class="max-w-7xl mx-auto px-5">
+  <div class="reveal max-w-2xl"><h2 class="serif text-3xl sm:text-5xl font-semibold" data-i18n="q_t"></h2><p class="mt-4 lead" data-i18n="q_sub"></p></div>
+  <div class="mt-12 grid md:grid-cols-3 gap-5">
+   <div class="reveal card rounded-2xl p-8"><h3 class="serif text-xl" data-i18n="qa1t"></h3><p class="muted mt-3 leading-7" data-i18n="qa1d"></p></div>
+   <div class="reveal card rounded-2xl p-8" style="--d:.1s"><h3 class="serif text-xl" data-i18n="qa2t"></h3><p class="muted mt-3 leading-7" data-i18n="qa2d"></p></div>
+   <div class="reveal card rounded-2xl p-8" style="--d:.2s"><h3 class="serif text-xl" data-i18n="qa3t"></h3><p class="muted mt-3 leading-7" data-i18n="qa3d"></p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="py-24 sm:py-32">
+ <div class="max-w-4xl mx-auto px-5"><div class="reveal panel rounded-3xl p-7 sm:p-12">
+  <h2 class="serif text-3xl font-semibold" data-i18n="c_t"></h2><p class="mt-3 lead" data-i18n="c_sub"></p>
+  <form id="qform" class="mt-8 grid sm:grid-cols-2 gap-4">
+   <input class="field" name="name" required data-ph="f_name"><input class="field" name="company" data-ph="f_company">
+   <input class="field" name="phone" type="tel" required data-ph="f_phone"><input class="field" id="f_product" name="product" required data-ph="f_product">
+   <input class="field sm:col-span-2" id="f_qty" name="qty" data-ph="f_qty">
+   <textarea class="field sm:col-span-2" name="msg" rows="3" data-ph="f_msg"></textarea>
+   <button class="btn btn-primary sm:col-span-2" data-i18n="f_send"></button>
+  </form>
+  <p class="mt-6 text-sm muted flex flex-wrap gap-x-6 gap-y-2"><span data-i18n="info_loc"></span><span dir="ltr">sales@hemadiamond.com</span></p>
+ </div></div>
+</section>
+
+<section id="location" class="loc" aria-labelledby="locTitle">
+ <div class="max-w-7xl mx-auto px-5">
+  <div class="loc-panel reveal">
+   <div class="loc-copy">
+    <p class="loc-kicker"><i aria-hidden="true"></i><span data-i18n="loc_kicker"></span></p>
+    <p class="loc-lock" dir="ltr"><b lang="en">Seeb</b><span class="loc-lock-rule" aria-hidden="true"></span><em lang="ar">السيب</em></p>
+    <h2 id="locTitle" class="serif" data-i18n="loc_t"></h2>
+    <p class="lead loc-lead" data-i18n="loc_sub"></p>
+    <div class="loc-place">
+     <span class="loc-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 6 56 28 32 58 8 28Z" fill="#D5AD63"/><path d="M8 28h48L32 58Z" fill="#07241f" opacity=".35"/></svg></span>
+     <div>
+      <p class="loc-status"><i aria-hidden="true"></i><span data-i18n="loc_status"></span></p>
+      <p class="loc-place-n serif" data-i18n="loc_place"></p>
+      <p class="loc-place-a" data-i18n="loc_addr"></p>
+     </div>
+    </div>
+    <ul class="loc-facts">
+     <li data-i18n="loc_m1"></li>
+     <li data-i18n="loc_m2"></li>
+     <li data-i18n="loc_m3"></li>
+    </ul>
+    <div class="loc-actions">
+     <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=23.59165,58.22429" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg><span data-i18n="loc_dir"></span></a>
+     <a class="btn btn-ghost" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 6.5h14v9H8l-3 2.5V15.5H5v-9Z"/></svg><span data-i18n="loc_msg"></span></a>
+    </div>
+   </div>
+   <div class="loc-map">
+    <iframe id="locMap" data-hl="en" title="Map showing Hema Diamond at Mwalih Central Market in Seeb" data-i18n-aria="loc_map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=23.59165,58.22429&amp;z=14&amp;hl=en&amp;output=embed"></iframe>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="site-foot">
+ <div class="site-foot-main">
+  <div class="max-w-7xl mx-auto px-5">
+   <p class="ft-kicker"><span data-i18n="ft_kicker"></span><i aria-hidden="true"></i></p>
+   <p class="ft-title" data-i18n="ft_title"></p>
+   <div class="ft-grid">
+    <div>
+     <p class="ft-label"><span data-i18n="ft_addr_l"></span><i aria-hidden="true"></i></p>
+     <a class="ft-addr" href="https://www.google.com/maps?q=23.59165,58.22429" target="_blank" rel="noopener"><span data-i18n="ft_addr"></span><span class="ft-city" data-i18n="ft_city"></span></a>
+    </div>
+    <div>
+     <p class="ft-label"><span data-i18n="ft_email_l"></span><i aria-hidden="true"></i></p>
+     <a class="ft-mail" id="ftMail" href="mailto:sales@hemadiamond.com">sales@hemadiamond.com</a>
+    </div>
+    <div>
+     <p class="ft-label"><span data-i18n="ft_phone_l"></span><i aria-hidden="true"></i></p>
+     <a class="ft-phone wa" id="ftPhone" dir="ltr" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div>
+     <p class="ft-label"><span data-i18n="ft_web_l"></span><i aria-hidden="true"></i></p>
+     <div class="ft-social">
+      <a class="ft-soc ft-wa wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm4.4 13.3c-.2.5-1.1 1-1.5 1-.4.1-.9.1-2.8-.6-2.4-1-3.9-3.4-4-3.6-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .5.4l.8 1.9c.1.2.1.3 0 .5l-.3.5c-.1.1-.3.3-.1.5.2.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l1.7.8c.2.1.4.2.4.3.1.2.1.6-.1 1.1Z"/></svg></a>
+      <a class="ft-soc ft-ig" id="ftIg" href="https://instagram.com/hemadiamond" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg></a>
+     </div>
+    </div>
+   </div>
+   <div class="ft-meta">
+    <p data-i18n="foot"></p>
+    <nav class="ft-nav" aria-label="Footer">
+     <a href="#home" data-i18n="nav_home"></a>
+     <a href="#products" data-i18n="nav_products"></a>
+     <a href="#about" data-i18n="nav_about"></a>
+     <a href="#quality" data-i18n="nav_quality"></a>
+     <a href="#contact" data-i18n="nav_contact"></a>
+    </nav>
+   </div>
+  </div>
+ </div>
+ <div class="ft-bar" dir="ltr" aria-hidden="true">
+  <div class="ft-word">
+   <svg class="ft-svg" viewBox="0 0 1000 228" preserveAspectRatio="xMidYMin meet">
+    <defs>
+     <linearGradient id="ftPine" x1="0" y1="0" x2="140" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3aaa90"/>
+      <stop offset=".28" stop-color="#176455"/>
+      <stop offset=".58" stop-color="#103F35"/>
+      <stop offset="1" stop-color="#0a1c19"/>
+     </linearGradient>
+     <linearGradient id="ftPineSweep" x1="0" y1="0" x2="0" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ec4aa"/>
+      <stop offset=".3" stop-color="#1a6b59"/>
+      <stop offset=".62" stop-color="#0e332c"/>
+      <stop offset="1" stop-color="#070908"/>
+     </linearGradient>
+    </defs>
+    <text class="ft-svg-base" x="0" y="214" font-size="232" textLength="1000" lengthAdjust="spacingAndGlyphs">HEMA</text>
+    <g class="ft-charge">
+     <text class="ft-svg-fill" x="0" y="214" font-size="232" textLength="1000" lengthAdjust="spacingAndGlyphs">HEMA</text>
+    </g>
+   </svg>
+   <span class="ft-beam"></span>
+  </div>
+  <div class="ft-fade"></div>
+ </div>
+</footer>
+
+<nav class="tabbar" aria-label="Menu">
+ <a class="tabbar-item on" href="#home" aria-current="page"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.8 12 4.5l7.5 6.3V19a1.2 1.2 0 0 1-1.2 1.2h-4.1v-5.2H9.8v5.2H5.7A1.2 1.2 0 0 1 4.5 19v-8.2Z"/></svg></span><span data-i18n="nav_home"></span></a>
+ <a class="tabbar-item" href="#about"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 20.2 9.4 12 20.8 3.8 9.4 12 3.2Z"/><path d="M3.8 9.4h16.4"/></svg></span><span data-i18n="nav_about"></span></a>
+ <a class="tabbar-item" href="#products"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="3.6" width="6.6" height="6.6" rx="1.6"/><rect x="13.8" y="3.6" width="6.6" height="6.6" rx="1.6"/><rect x="3.6" y="13.8" width="6.6" height="6.6" rx="1.6"/><rect x="13.8" y="13.8" width="6.6" height="6.6" rx="1.6"/></svg></span><span data-i18n="nav_products"></span></a>
+ <a class="tabbar-item" href="#quality"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 5.2 6.1v5.7c0 4 2.7 6.8 6.8 8.1 4.1-1.3 6.8-4.1 6.8-8.1V6.1L12 3.2Z"/><path d="m8.7 11.9 2.2 2.2 4.3-4.5"/></svg></span><span data-i18n="nav_quality"></span></a>
+ <a class="tabbar-item" href="#contact"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6.4h14v8.6H8.2L5 17.6v-2.6H5V6.4Z"/></svg></span><span data-i18n="nav_contact"></span></a>
+</nav>
+<div class="dock-stack">
+ <button id="chatBtn" class="dock" type="button" aria-label="Chat"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.2-4.3A8 8 0 1 1 21 12Z"/></svg></button>
+ <a class="dock wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#wa"/></svg></a>
+</div>
+<section id="chat" class="fixed end-5 z-40 glass rounded-3xl flex flex-col overflow-hidden">
+ <div class="flex items-center justify-between border-b border-pine/10"><div><b class="serif" data-i18n="chat_t"></b><p class="text-xs muted" data-i18n="chat_sub"></p></div><button id="chatClose" class="opacity-60 hover:opacity-100 text-xl leading-none" aria-label="Close">×</button></div>
+ <div id="msgs" class="flex flex-col gap-2.5"></div>
+ <form id="chatForm" class="flex gap-2 border-t border-pine/10"><input id="chatIn" class="field !py-2" data-ph="chat_ph" autocomplete="off"><button class="chat-send" type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 19.4 20.3 12 4.2 4.6l.1 5.7L14 12l-9.7 1.7.1 5.7Z"/></svg></button></form>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/config.js?v=6"></script>
+<script src="js/config.local.js?v=1"></script>
+<script src="js/i18n.js?v=11"></script><script src="js/app.js?v=20"></script>
+</body></html>

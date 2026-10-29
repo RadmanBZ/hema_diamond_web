@@ -1,0 +1,14 @@
+# Local secrets (never commit API keys)
+js/config.local.js
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.log
+Untitled
