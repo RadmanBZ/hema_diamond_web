@@ -228,7 +228,7 @@ paintHd();
 addEventListener("scroll", paintHd, { passive: true });
 if (lenis) lenis.on("scroll", paintHd);
 const tabItems = $$(".tabbar-item");
-const tabSecs = ["home", "about", "products", "quality", "contact"].map(id => document.getElementById(id)).filter(Boolean);
+const tabSecs = ["home", "about", "products", "markets", "contact"].map(id => document.getElementById(id)).filter(Boolean);
 const paintTab = () => {
   if (!tabItems.length || !tabSecs.length) return;
   const mark = scrollY + innerHeight * 0.34;

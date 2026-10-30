@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../assets/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css?v=45">
+<title>Hema Diamond Portals</title>
+</head>
+<body>
+<div id="app"></div>
+<script src="js/i18n.js"></script>
+<script src="js/core.js"></script>
+<script>
+HD.mount(() => HD.shell("pc", null, "", "", "../index.html") +
+  `<main class="wrap">
+    <div class="portal-hero reveal">
+      <img src="../assets/images/logo.png" alt="Hema Diamond">
+      <h1 class="serif">${HD.t("pc")}</h1>
+      <p>${HD.t("demo")}</p>
+    </div>
+    <div class="choose">
+      <a class="card card-lift card-glow reveal" href="client.html">
+        <h2 class="serif">${HD.t("tc")}</h2>
+        <p class="lead">${HD.t("go_client")}</p>
+        <p class="hint" dir="ltr">96890001111 · client123</p>
+        <span class="btn btn-dark sm">${HD.t("signin")}</span>
+      </a>
+      <a class="card card-lift card-glow reveal" href="admin.html" style="--d:.08s">
+        <h2 class="serif">${HD.t("ta")}</h2>
+        <p class="lead">${HD.t("go_admin")}</p>
+        <p class="hint" dir="ltr">admin · hema2026</p>
+        <span class="btn btn-gold sm">${HD.t("signin")}</span>
+      </a>
+    </div>
+  </main>`, () => {});
+</script>
+</body>
+</html>

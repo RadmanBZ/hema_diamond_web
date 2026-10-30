@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{pine:'#103F35',gold:'#D5AD63',cream:'#F5F3EE',pearl:'#F3F5F1'}}}}</script>
-<link rel="stylesheet" href="css/style.css?v=30">
+<link rel="stylesheet" href="css/style.css?v=37">
 </head>
 <body class="antialiased overflow-x-hidden">
 <svg width="0" height="0" class="absolute"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm4.4 13.3c-.2.5-1.1 1-1.5 1-.4.1-.9.1-2.800-.6-2.400-1-3.900-3.400-4-3.600-.1-.1-1-1.300-1-2.500s.6-1.800.9-2c.2-.2.4-.3.600-.3h.4c.2 0 .4 0 .5.4l.8 1.900c.1.200.1.300 0 .5l-.3.500c-.1.100-.3.300-.1.500.2.300.7 1.100 1.500 1.800 1 .9 1.800 1.100 2.100 1.300.3.100.4.100.5-.1l.7-.9c.2-.2.3-.2.500-.1l1.700.8c.2.100.4.200.4.300.1.200.1.600-.1 1.100Z"/></symbol></svg>
@@ -36,10 +36,11 @@
  <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-4">
   <a href="#home" class="brand" aria-label="Hema Diamond"><img class="brand-logo" src="assets/images/logo.png" alt="Hema Diamond"></a>
   <nav class="hidden lg:flex gap-9 text-sm font-medium">
-   <a class="nav-link" href="#home" data-i18n="nav_home"></a><a class="nav-link" href="#about" data-i18n="nav_about"></a><a class="nav-link" href="#products" data-i18n="nav_products"></a><a class="nav-link" href="#quality" data-i18n="nav_quality"></a><a class="nav-link" href="#contact" data-i18n="nav_contact"></a>
+   <a class="nav-link" href="#home" data-i18n="nav_home"></a><a class="nav-link" href="#about" data-i18n="nav_about"></a><a class="nav-link" href="#products" data-i18n="nav_products"></a><a class="nav-link" href="#markets" data-i18n="nav_markets"></a><a class="nav-link" href="#contact" data-i18n="nav_contact"></a>
   </nav>
   <div class="flex items-center gap-3">
    <div class="lang-switch" dir="ltr"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ar">AR</button><button class="lang-btn" data-lang="fa">FA</button></div>
+   <a href="portal/index.html" class="btn btn-portal !py-2.5 text-sm"><span data-i18n="nav_portal"></span></a>
    <a href="#contact" class="btn btn-primary hidden md:inline-flex !py-2.5 text-sm" data-i18n="cta_quote"></a>
   </div>
  </div>
@@ -146,7 +147,7 @@
     <p data-i18n="w2d"></p>
    </article>
    <div class="why-mark">
-    <img src="assets/images/logo.png" alt="Hema Diamond">
+    <img src="assets/images/choose.png" alt="Hema Diamond">
    </div>
    <article class="why-item why-c">
     <p class="why-n" aria-hidden="true">03</p>
@@ -239,18 +240,53 @@
  <div class="max-w-3xl mx-auto px-5 reveal"><h2 class="serif text-3xl sm:text-5xl font-semibold" data-i18n="c_t"></h2><p class="mt-4" data-i18n="c_sub"></p><a href="#contact" class="btn btn-primary mt-8" data-i18n="cta_quote"></a></div>
 </section>
 
-<section id="quality" class="band-light py-24 sm:py-36">
- <div class="max-w-7xl mx-auto px-5">
-  <div class="reveal max-w-2xl"><h2 class="serif text-3xl sm:text-5xl font-semibold" data-i18n="q_t"></h2><p class="mt-4 lead" data-i18n="q_sub"></p></div>
-  <div class="mt-12 grid md:grid-cols-3 gap-5">
-   <div class="reveal card rounded-2xl p-8"><h3 class="serif text-xl" data-i18n="qa1t"></h3><p class="muted mt-3 leading-7" data-i18n="qa1d"></p></div>
-   <div class="reveal card rounded-2xl p-8" style="--d:.1s"><h3 class="serif text-xl" data-i18n="qa2t"></h3><p class="muted mt-3 leading-7" data-i18n="qa2d"></p></div>
-   <div class="reveal card rounded-2xl p-8" style="--d:.2s"><h3 class="serif text-xl" data-i18n="qa3t"></h3><p class="muted mt-3 leading-7" data-i18n="qa3d"></p></div>
+<section id="markets" class="markets" aria-labelledby="marketsTitle">
+ <div class="markets-bg" aria-hidden="true">
+  <img src="assets/images/field-close.jpg" alt="">
+ </div>
+ <div class="max-w-7xl mx-auto px-5 markets-inner">
+  <div class="markets-head reveal">
+   <h2 id="marketsTitle" class="serif" data-i18n="m_t"></h2>
+   <p class="lead" data-i18n="m_sub"></p>
+  </div>
+  <div class="markets-grid">
+   <a class="mkt reveal" href="sectors/restaurants.html">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20.5V38h32V20.5"/><path d="M6 20.5h36l-3.2-8.5H9.2L6 20.5Z"/><path d="M18 38V28h12v10"/><path d="M14 16.5V12h6v4.5M28 16.5V12h6v4.5"/></svg></span>
+    <h3 data-i18n="m1t"></h3><p data-i18n="m1d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/hotels.html" style="--d:.06s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 38V17h20v21"/><path d="M12 38h24"/><path d="M18 17V12h12v5"/><path d="M20 22h3v3h-3zM25 22h3v3h-3zM20 28h3v3h-3zM25 28h3v3h-3z"/><path d="M21.5 38v-4h5v4"/></svg></span>
+    <h3 data-i18n="m2t"></h3><p data-i18n="m2d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/retail.html" style="--d:.12s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38V18h28v20"/><path d="M8 18h32l-2.5-7H10.5L8 18Z"/><path d="M18 38V26h12v12"/><circle cx="24" cy="21.5" r="1.4"/></svg></span>
+    <h3 data-i18n="m3t"></h3><p data-i18n="m3d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/restaurants.html" style="--d:.18s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 20h16v10.5a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6V20Z"/><path d="M31 23h3.5a3.5 3.5 0 0 1 0 7H31"/><path d="M20 12.5c.8 1.2.8 2.4 0 3.6M24 11.5c.8 1.2.8 2.4 0 3.6M28 12.5c.8 1.2.8 2.4 0 3.6"/><path d="M14 39h20"/></svg></span>
+    <h3 data-i18n="m4t"></h3><p data-i18n="m4d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/manufacturers.html" style="--d:.08s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 36c0-5 2.8-8.2 6-10.5 3.2 2.3 6 5.5 6 10.5"/><path d="M18 36h12"/><ellipse cx="24" cy="18.5" rx="5" ry="4"/><path d="M19.5 16.2c.8-2.2 2.4-3.7 4.5-3.7s3.7 1.5 4.5 3.7"/><path d="M21 22.5h6"/></svg></span>
+    <h3 data-i18n="m5t"></h3><p data-i18n="m5d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/healthcare.html" style="--d:.14s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 36c0-4.5 3.6-7 8-7s8 2.5 8 7"/><circle cx="24" cy="22" r="4.2"/><path d="M12 36c0-3.2 2.2-5.2 5-5.8"/><circle cx="14.5" cy="24.5" r="3.2"/><path d="M36 36c0-3.2-2.2-5.2-5-5.8"/><circle cx="33.5" cy="24.5" r="3.2"/><path d="M18 14.5h12v5.5H18z"/></svg></span>
+    <h3 data-i18n="m6t"></h3><p data-i18n="m6d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/government.html" style="--d:.2s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38V20l14-10 14 10v18"/><path d="M10 38h28"/><path d="M18 38V26h12v12"/><path d="M18 20h12M21 24h6M21 28h6"/></svg></span>
+    <h3 data-i18n="m7t"></h3><p data-i18n="m7d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
+   <a class="mkt reveal" href="sectors/home-delivery.html" style="--d:.26s">
+    <span class="mkt-ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30h20l5-9H15L10 30Z"/><path d="M10 30v7h18v-7"/><circle cx="15" cy="38.2" r="2.3"/><circle cx="25" cy="38.2" r="2.3"/><path d="M35 20h7l2.2 7H35"/><path d="M30.5 16.5H35V29"/><path d="M37.2 12.8v4.2M39.5 14.2 37.2 16.5 34.9 14.2"/></svg></span>
+    <h3 data-i18n="m8t"></h3><p data-i18n="m8d"></p><span class="mkt-go" data-i18n="mkt_go"></span>
+   </a>
   </div>
  </div>
 </section>
 
-<section id="contact" class="py-24 sm:py-32">
+<section id="contact" class="pt-10 sm:pt-12 pb-24 sm:pb-32">
  <div class="max-w-4xl mx-auto px-5"><div class="reveal panel rounded-3xl p-7 sm:p-12">
   <h2 class="serif text-3xl font-semibold" data-i18n="c_t"></h2><p class="mt-3 lead" data-i18n="c_sub"></p>
   <form id="qform" class="mt-8 grid sm:grid-cols-2 gap-4">
@@ -328,9 +364,11 @@
     <nav class="ft-nav" aria-label="Footer">
      <a href="#home" data-i18n="nav_home"></a>
      <a href="#products" data-i18n="nav_products"></a>
-     <a href="#about" data-i18n="nav_about"></a>
-     <a href="#quality" data-i18n="nav_quality"></a>
+     <a href="sectors/hotels.html" data-i18n="nav_hotels"></a>
+     <a href="sectors/restaurants.html" data-i18n="nav_restaurants"></a>
+     <a href="#markets" data-i18n="nav_markets"></a>
      <a href="#contact" data-i18n="nav_contact"></a>
+     <a href="portal/index.html" data-i18n="nav_portal"></a>
     </nav>
    </div>
   </div>
@@ -367,7 +405,7 @@
  <a class="tabbar-item on" href="#home" aria-current="page"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.8 12 4.5l7.5 6.3V19a1.2 1.2 0 0 1-1.2 1.2h-4.1v-5.2H9.8v5.2H5.7A1.2 1.2 0 0 1 4.5 19v-8.2Z"/></svg></span><span data-i18n="nav_home"></span></a>
  <a class="tabbar-item" href="#about"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 20.2 9.4 12 20.8 3.8 9.4 12 3.2Z"/><path d="M3.8 9.4h16.4"/></svg></span><span data-i18n="nav_about"></span></a>
  <a class="tabbar-item" href="#products"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="3.6" width="6.6" height="6.6" rx="1.6"/><rect x="13.8" y="3.6" width="6.6" height="6.6" rx="1.6"/><rect x="3.6" y="13.8" width="6.6" height="6.6" rx="1.6"/><rect x="13.8" y="13.8" width="6.6" height="6.6" rx="1.6"/></svg></span><span data-i18n="nav_products"></span></a>
- <a class="tabbar-item" href="#quality"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 5.2 6.1v5.7c0 4 2.7 6.8 6.8 8.1 4.1-1.3 6.8-4.1 6.8-8.1V6.1L12 3.2Z"/><path d="m8.7 11.9 2.2 2.2 4.3-4.5"/></svg></span><span data-i18n="nav_quality"></span></a>
+ <a class="tabbar-item" href="#markets"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.2 12 4.8l7.5 5.4"/><path d="M6.2 9.8V19h11.6V9.8"/><path d="M9.5 19v-5.2h5V19"/></svg></span><span data-i18n="nav_markets"></span></a>
  <a class="tabbar-item" href="#contact"><span class="tabbar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6.4h14v8.6H8.2L5 17.6v-2.6H5V6.4Z"/></svg></span><span data-i18n="nav_contact"></span></a>
 </nav>
 <div class="dock-stack">
@@ -382,5 +420,5 @@
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="js/config.js?v=6"></script>
 <script src="js/config.local.js?v=1"></script>
-<script src="js/i18n.js?v=11"></script><script src="js/app.js?v=20"></script>
+<script src="js/i18n.js?v=15"></script><script src="js/app.js?v=21"></script>
 </body></html>
